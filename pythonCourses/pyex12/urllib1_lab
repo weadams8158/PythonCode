@@ -1,0 +1,10 @@
+import urllib.request, urllib.parse, urllib.error
+
+url = input ('Enter Url - ')
+if len(url) < 1 : url = "http://py4e-data.dr-chuck.net/known_by_Fikret.html"
+count = input ('Enter count - ')
+position = input ('Enter Position - ')
+
+fhand = urllib.request.urlopen(url)
+for line in fhand:
+    print(line.decode().strip())
